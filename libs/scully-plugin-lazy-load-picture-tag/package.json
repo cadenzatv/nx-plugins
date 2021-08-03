@@ -1,5 +1,5 @@
 {
-  "name": "@flowaccount/scully-plugin-lazy-load-picture-tag",
+  "name": "@cadenzatv/scully-plugin-lazy-load-picture-tag",
   "version": "0.0.3",
   "peerDependencies": {
     "@scullyio/scully": "latest"

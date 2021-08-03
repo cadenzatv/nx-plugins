@@ -6,7 +6,7 @@
     "init": {
       "factory": "./src/schematics/init/init",
       "schema": "./src/schematics/init/schema.json",
-      "description": "Initialize the @flowaccount/nx-serverless plugin",
+      "description": "Initialize the @cadenzatv/nx-serverless plugin",
       "aliases": ["ng-add", "init-serverless"],
       "hidden": true
     },

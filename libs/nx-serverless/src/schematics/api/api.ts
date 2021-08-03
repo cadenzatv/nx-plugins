@@ -38,7 +38,7 @@ interface NormalizedSchema extends Schema {
 
 function getServeConfig(project: any, options: NormalizedSchema) {
   return {
-    builder: '@flowaccount/nx-serverless:offline',
+    builder: '@cadenzatv/nx-serverless:offline',
     options: {
       buildTarget: options.name + ':build',
       config: joinPathFragments(options.appProjectRoot, 'serverless.yml'),
@@ -58,7 +58,7 @@ function getServeConfig(project: any, options: NormalizedSchema) {
 
 function getDeployConfig(project: any, options: NormalizedSchema) {
   return {
-    builder: '@flowaccount/nx-serverless:deploy',
+    builder: '@cadenzatv/nx-serverless:deploy',
     options: {
       buildTarget: options.name + ':build:production',
       config: joinPathFragments(options.appProjectRoot, 'serverless.yml'),
@@ -71,7 +71,7 @@ function getDeployConfig(project: any, options: NormalizedSchema) {
 
 function getDestroyConfig(options: NormalizedSchema) {
   return {
-    builder: '@flowaccount/nx-serverless:destroy',
+    builder: '@cadenzatv/nx-serverless:destroy',
     options: {
       buildTarget: options.name + ':build:production',
       config: joinPathFragments(options.appProjectRoot, 'serverless.yml'),

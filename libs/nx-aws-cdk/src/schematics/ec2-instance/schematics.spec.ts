@@ -33,7 +33,7 @@ describe('ec2-instance app', () => {
       expect(project.architect).toEqual(
         jasmine.objectContaining({
           cdk: {
-            builder: '@flowaccount/nx-aws-cdk:run',
+            builder: '@cadenzatv/nx-aws-cdk:run',
             options: {
               waitUntilTargets: [],
               buildTarget: 'my-app:build:production',

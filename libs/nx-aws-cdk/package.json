@@ -1,5 +1,5 @@
 {
-  "name": "@flowaccount/nx-aws-cdk",
+  "name": "@cadenzatv/nx-aws-cdk",
   "version": "0.0.1",
   "main": "src/index.js",
   "schematics": "./collection.json",

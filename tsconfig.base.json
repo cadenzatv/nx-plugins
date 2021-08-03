@@ -16,21 +16,21 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@flowaccount/flowaccount/nx-serverless": [
+      "@cadenzatv/flowaccount/nx-serverless": [
         "libs/nx-serverless/src/index.ts"
       ],
-      "@flowaccount/aws-cdk": ["libs/aws-cdk/src/index.ts"],
-      "@flowaccount/nx-aws-cdk": ["libs/nx-aws-cdk/src/index.ts"],
-      "@flowaccount/angular-paperclip-experiment": [
+      "@cadenzatv/aws-cdk": ["libs/aws-cdk/src/index.ts"],
+      "@cadenzatv/nx-aws-cdk": ["libs/nx-aws-cdk/src/index.ts"],
+      "@cadenzatv/angular-paperclip-experiment": [
         "libs/angular-paperclip-experiment/src/index.ts"
       ],
-      "@flowaccount/scully-plugin-angular-delay": [
+      "@cadenzatv/scully-plugin-angular-delay": [
         "libs/scully-plugin-angular-delay/src/index.ts"
       ],
-      "@flowaccount/scully-plugin-lazy-load-picture-tag": [
+      "@cadenzatv/scully-plugin-lazy-load-picture-tag": [
         "libs/scully-plugin-lazy-load-picture-tag/src/index.ts"
       ],
-      "@flowaccount/scully-plugin-google-analytics": [
+      "@cadenzatv/scully-plugin-google-analytics": [
         "libs/scully-plugin-google-analytics/src/index.ts"
       ]
     }

@@ -29,7 +29,7 @@ interface NormalizedSchema extends BaseNormalizedSchema {
 class EC2InstanceCdkSchematicsAdapter implements AwsCdkSchematicsAdapter {
   getCdkConfiguration(options: BaseNormalizedSchema) {
     return {
-      builder: '@flowaccount/nx-aws-cdk:run',
+      builder: '@cadenzatv/nx-aws-cdk:run',
       options: {
         waitUntilTargets: [],
         buildTarget: options.projectName + ':build:production',

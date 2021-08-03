@@ -69,7 +69,7 @@
           "builder": "@nrwl/nx-plugin:e2e",
           "options": {
             "target": "nx-serverless:build",
-            "npmPackageName": "@flowaccount/nx-serverless",
+            "npmPackageName": "@cadenzatv/nx-serverless",
             "pluginOutputPath": "dist/libs/nx-serverless",
             "jestConfig": "apps/nx-serverless-e2e/jest.config.js"
           }
@@ -143,7 +143,7 @@
           "builder": "@nrwl/nx-plugin:e2e",
           "options": {
             "target": "nx-aws-cdk:build",
-            "npmPackageName": "@flowaccount/nx-aws-cdk",
+            "npmPackageName": "@cadenzatv/nx-aws-cdk",
             "pluginOutputPath": "dist/libs/nx-aws-cdk",
             "jestConfig": "apps/nx-aws-cdk-e2e/jest.config.js"
           }

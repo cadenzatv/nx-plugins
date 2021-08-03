@@ -1,5 +1,5 @@
 {
-  "name": "@flowaccount/scully-plugin-google-analytics",
+  "name": "@cadenzatv/scully-plugin-google-analytics",
   "version": "0.0.2",
   "peerDependencies": {
     "@scullyio/scully": "^0.0.91"

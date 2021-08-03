@@ -11,7 +11,7 @@ export interface BaseSchema {
 
 export function getBuildConfig(options: BaseSchema) {
   return {
-    executor: '@flowaccount/nx-serverless:build',
+    executor: '@cadenzatv/nx-serverless:build',
     options: {
       outputPath: joinPathFragments(normalize('dist'), options.appProjectRoot),
       package: options.appProjectRoot,

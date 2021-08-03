@@ -30,7 +30,7 @@ function addDependencies(
   const dependencies = {};
   const tasks: GeneratorCallback[] = [];
   const devDependencies = {
-    '@flowaccount/nx-serverless': nxVersion,
+    '@cadenzatv/nx-serverless': nxVersion,
     serverless: serverlessVersion,
     'serverless-offline': serverlessOfflineVersion,
   };
@@ -70,12 +70,12 @@ function addDependencies(
 
 function updateDependencies(tree: Tree) {
   updateJson(tree, '/package.json', (json) => {
-    if (json.dependencies['@flowaccount/nx-serverless']) {
-      json.devDependencies['@flowaccount/nx-serverless'] =
-        json.dependencies['@flowaccount/nx-serverless'];
-      delete json.dependencies['@flowaccount/nx-serverless'];
-    } else if (!json.devDependencies['@flowaccount/nx-serverless']) {
-      json.devDependencies['@flowaccount/nx-serverless'] = nxVersion;
+    if (json.dependencies['@cadenzatv/nx-serverless']) {
+      json.devDependencies['@cadenzatv/nx-serverless'] =
+        json.dependencies['@cadenzatv/nx-serverless'];
+      delete json.dependencies['@cadenzatv/nx-serverless'];
+    } else if (!json.devDependencies['@cadenzatv/nx-serverless']) {
+      json.devDependencies['@cadenzatv/nx-serverless'] = nxVersion;
     }
     return json;
   });

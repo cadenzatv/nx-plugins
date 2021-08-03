@@ -35,7 +35,7 @@ describe('express app', () => {
       expect(project.targets).toEqual(
         jasmine.objectContaining({
           compile: {
-            executor: '@flowaccount/nx-serverless:compile',
+            executor: '@cadenzatv/nx-serverless:compile',
             configurations: {
               dev: {
                 budgets: [
@@ -81,7 +81,7 @@ describe('express app', () => {
             },
           },
           deploy: {
-            executor: '@flowaccount/nx-serverless:deploy',
+            executor: '@cadenzatv/nx-serverless:deploy',
             options: {
               waitUntilTargets: ['my-app:build:production'],
               buildTarget: 'my-app:compile:production',
@@ -92,7 +92,7 @@ describe('express app', () => {
             },
           },
           destroy: {
-            executor: '@flowaccount/nx-serverless:destroy',
+            executor: '@cadenzatv/nx-serverless:destroy',
             options: {
               buildTarget: 'my-app:compile:production',
               config: 'apps/my-app/serverless.yml',
@@ -101,7 +101,7 @@ describe('express app', () => {
             },
           },
           offline: {
-            executor: '@flowaccount/nx-serverless:offline',
+            executor: '@cadenzatv/nx-serverless:offline',
             configurations: {
               dev: {
                 buildTarget: 'my-app:compile:dev',

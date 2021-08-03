@@ -10,7 +10,7 @@ import { externalSchematic, Rule, Tree } from '@angular-devkit/schematics';
 import { SchematicTestRunner } from '@angular-devkit/schematics/testing';
 
 const testRunner = new SchematicTestRunner(
-  '@flowaccount/nx-serverless',
+  '@cadenzatv/nx-serverless',
   join(__dirname, '../../collection.json')
 );
 
@@ -27,7 +27,7 @@ export function callRule(rule: Rule, tree: Tree) {
 }
 
 export async function getMockContext() {
-  const registry = new schema.CoreSchemaRegistry();
+  /*const registry = new schema.CoreSchemaRegistry();
   registry.addPostTransform(schema.transforms.addUndefinedDefaults);
 
   const architectHost = new TestingArchitectHost('/root', '/root');
@@ -37,9 +37,9 @@ export async function getMockContext() {
 
   const context = new MockBuilderContext(architect, architectHost);
   await context.addBuilderFromPackage(join(__dirname, '../..'));
-  await context.addTarget({ project: 'test', target: 'test' }, 'build');
+  await context.addTarget({ project: 'test', target: 'test' }, 'build');*/
 
-  return [architect, context] as [Architect, MockBuilderContext];
+  //return [architect, context] as [Architect, MockBuilderContext];
 }
 
 export async function createTestUILib(
@@ -48,7 +48,7 @@ export async function createTestUILib(
 ): Promise<Tree> {
   let appTree = createEmptyWorkspace(Tree.empty());
   appTree = await callRule(
-    externalSchematic('@flowaccount/nx-serverless', 'library', {
+    externalSchematic('@cadenzatv/nx-serverless', 'library', {
       name: libName,
       buildable,
     }),

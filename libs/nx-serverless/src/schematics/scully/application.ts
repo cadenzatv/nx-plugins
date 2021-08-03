@@ -18,7 +18,7 @@ interface NormalizedSchema extends Schema {}
 
 function getServeConfig(options: NormalizedSchema) {
   return {
-    executor: '@flowaccount/nx-serverless:offline',
+    executor: '@cadenzatv/nx-serverless:offline',
     options: {
       waitUntilTargets: [options.project + ':scully'],
       buildTarget: options.project + ':compile',
@@ -38,7 +38,7 @@ function getServeConfig(options: NormalizedSchema) {
 
 function getScullyBuilderConfig(options: NormalizedSchema) {
   return {
-    executor: '@flowaccount/nx-serverless:scully',
+    executor: '@cadenzatv/nx-serverless:scully',
     options: {
       buildTarget: options.project + ':build:production',
       configFiles: [join(options.appProjectRoot, 'scully.config.js')],
@@ -51,7 +51,7 @@ function getScullyBuilderConfig(options: NormalizedSchema) {
 
 function getDeployConfig(options: NormalizedSchema) {
   return {
-    executor: '@flowaccount/nx-serverless:deploy',
+    executor: '@cadenzatv/nx-serverless:deploy',
     options: {
       waitUntilTargets: [options.project + ':scully'],
       buildTarget: options.project + ':compile:production',
@@ -64,7 +64,7 @@ function getDeployConfig(options: NormalizedSchema) {
 
 function getDestroyConfig(options: NormalizedSchema) {
   return {
-    executor: '@flowaccount/nx-serverless:destroy',
+    executor: '@cadenzatv/nx-serverless:destroy',
     options: {
       buildTarget: options.project + ':compile:production',
       config: join(options.appProjectRoot, 'serverless.yml'),
@@ -86,7 +86,7 @@ function updateWorkspaceJson(
     options.appProjectRoot,
     'tsconfig.serverless.json'
   );
-  buildConfig.executor = '@flowaccount/nx-serverless:compile';
+  buildConfig.executor = '@cadenzatv/nx-serverless:compile';
   project.targets.compile = buildConfig;
   project.targets.scully = getScullyBuilderConfig(options);
   project.targets.offline = getServeConfig(options);

@@ -39,7 +39,7 @@ describe('node api app', () => {
       expect(project.architect).toEqual(
         jasmine.objectContaining({
           build: {
-            builder: '@flowaccount/nx-serverless:build',
+            builder: '@cadenzatv/nx-serverless:build',
             configurations: {
               dev: {
                 budgets: [
@@ -84,7 +84,7 @@ describe('node api app', () => {
             },
           },
           deploy: {
-            builder: '@flowaccount/nx-serverless:deploy',
+            builder: '@cadenzatv/nx-serverless:deploy',
             options: {
               buildTarget: 'my-serveless-app:build:production',
               config: 'apps/my-serveless-app/serverless.yml',
@@ -94,7 +94,7 @@ describe('node api app', () => {
             },
           },
           destroy: {
-            builder: '@flowaccount/nx-serverless:destroy',
+            builder: '@cadenzatv/nx-serverless:destroy',
             options: {
               buildTarget: 'my-serveless-app:build:production',
               config: 'apps/my-serveless-app/serverless.yml',
@@ -113,7 +113,7 @@ describe('node api app', () => {
             },
           },
           serve: {
-            builder: '@flowaccount/nx-serverless:offline',
+            builder: '@cadenzatv/nx-serverless:offline',
             configurations: {
               dev: {
                 buildTarget: 'my-serveless-app:build:dev',

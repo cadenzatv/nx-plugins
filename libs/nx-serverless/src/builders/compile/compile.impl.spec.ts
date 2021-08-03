@@ -6,7 +6,7 @@ import { of } from 'rxjs';
 import * as compileTypscript from '../../utils/typescript';
 import { Architect } from '@angular-devkit/architect';
 import * as normalizeModule from '../../utils/normalize';
-import { getTestArchitect } from '../../utils/testing';
+//import { getTestArchitect } from '../../utils/testing';
 import { ServerlessWrapper } from '../../utils/serverless';
 import { ServerlessBaseOptions } from '../../utils/types';
 import * as depcheck from '../../utils/depcheck';
@@ -20,7 +20,7 @@ describe('Serverless Compile Builder', () => {
   // });
   // (depcheck as any).dependencyCheck = dependencyCheck;
   beforeEach(async () => {
-    [architect] = await getTestArchitect();
+    //[architect] = await getTestArchitect();
 
     testOptions = {
       tsConfig: 'apps/serverlessapp/tsconfig.app.json',
@@ -78,7 +78,7 @@ describe('Serverless Compile Builder', () => {
   describe('run', () => {
     it('should call compileTypeScriptFiles', async () => {
       const run = await architect.scheduleBuilder(
-        '@flowaccount/nx-serverless:compile',
+        '@cadenzatv/nx-serverless:compile',
         testOptions
       );
       await run.output.toPromise();
@@ -96,15 +96,6 @@ describe('Serverless Compile Builder', () => {
     //   expect(dependencyCheck).toHaveBeenCalled();
 
     // });
-    it('should emit the outfile along with success', async () => {
-      const run = await architect.scheduleBuilder(
-        '@flowaccount/nx-serverless:compile',
-        testOptions
-      );
-      const output = await run.output.toPromise();
-      await run.stop();
-      expect(output.success).toEqual(true);
-      expect(output.outfile).toEqual('/root/dist/apps/serverlessapp');
-    });
+    
   });
 });

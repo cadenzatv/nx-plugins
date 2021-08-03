@@ -7,7 +7,7 @@ import { Architect } from '@angular-devkit/architect';
 import { MockBuilderContext } from '@nrwl/workspace/testing';
 
 const testRunner = new SchematicTestRunner(
-  '@flowaccount/nx-aws-cdk',
+  '@cadenzatv/nx-aws-cdk',
   join(__dirname, '../../collection.json')
 );
 

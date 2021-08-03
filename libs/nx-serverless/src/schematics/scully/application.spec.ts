@@ -72,7 +72,7 @@ describe('scully app', () => {
       expect(project.targets).toEqual(
         jasmine.objectContaining({
           compile: {
-            builder: '@flowaccount/nx-serverless:compile',
+            builder: '@cadenzatv/nx-serverless:compile',
             configurations: {
               dev: {
                 budgets: [
@@ -118,7 +118,7 @@ describe('scully app', () => {
             },
           },
           deploy: {
-            builder: '@flowaccount/nx-serverless:deploy',
+            builder: '@cadenzatv/nx-serverless:deploy',
             options: {
               waitUntilTargets: ['my-app:scully'],
               buildTarget: 'my-app:compile:production',
@@ -128,7 +128,7 @@ describe('scully app', () => {
             },
           },
           destroy: {
-            builder: '@flowaccount/nx-serverless:destroy',
+            builder: '@cadenzatv/nx-serverless:destroy',
             options: {
               buildTarget: 'my-app:compile:production',
               config: 'apps/my-app/serverless.yml',
@@ -137,7 +137,7 @@ describe('scully app', () => {
             },
           },
           scully: {
-            builder: '@flowaccount/nx-serverless:scully',
+            builder: '@cadenzatv/nx-serverless:scully',
             options: {
               buildTarget: 'my-app:build:production',
               configFiles: ['apps/my-app/scully.config.js'],
@@ -147,7 +147,7 @@ describe('scully app', () => {
             },
           },
           offline: {
-            builder: '@flowaccount/nx-serverless:offline',
+            builder: '@cadenzatv/nx-serverless:offline',
             configurations: {
               dev: {
                 buildTarget: 'my-app:compile:dev',

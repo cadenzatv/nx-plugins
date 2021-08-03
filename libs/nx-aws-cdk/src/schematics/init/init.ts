@@ -29,7 +29,7 @@ function addDependencies(expressApp: boolean, ec2Instance: boolean): Rule {
   return (host: Tree, context: SchematicContext): Rule => {
     const dependencies = {};
     const devDependencies = {
-      '@flowaccount/nx-aws-cdk': nxVersion,
+      '@cadenzatv/nx-aws-cdk': nxVersion,
       'aws-cdk': awscdkVersion,
       '@aws-cdk/core': awscdkCoreVersion
     };
@@ -72,12 +72,12 @@ function addDependencies(expressApp: boolean, ec2Instance: boolean): Rule {
 
 function updateDependencies(): Rule {
   return updateJsonInTree('package.json', json => {
-    if (json.dependencies['@flowaccount/nx-aws-cdk']) {
-      json.devDependencies['@flowaccount/nx-aws-cdk'] =
-        json.dependencies['@flowaccount/nx-aws-cdk'];
-      delete json.dependencies['@flowaccount/nx-aws-cdk'];
-    } else if (!json.devDependencies['@flowaccount/nx-aws-cdk']) {
-      json.devDependencies['@flowaccount/nx-aws-cdk'] = nxVersion;
+    if (json.dependencies['@cadenzatv/nx-aws-cdk']) {
+      json.devDependencies['@cadenzatv/nx-aws-cdk'] =
+        json.dependencies['@cadenzatv/nx-aws-cdk'];
+      delete json.dependencies['@cadenzatv/nx-aws-cdk'];
+    } else if (!json.devDependencies['@cadenzatv/nx-aws-cdk']) {
+      json.devDependencies['@cadenzatv/nx-aws-cdk'] = nxVersion;
     }
     return json;
   });
